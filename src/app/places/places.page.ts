@@ -12,6 +12,8 @@ import { IonicModule } from '@ionic/angular';
 })
 export class PlacesPage implements OnInit {
 
+  places: string[] = ['Brunei', 'Tutong', 'Belait', 'Temburong'];
+
   constructor() { }
 
   ngOnInit() {
