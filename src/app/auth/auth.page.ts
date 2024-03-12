@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-auth',
@@ -12,8 +13,14 @@ import { RouterModule } from '@angular/router';
   imports: [IonicModule, CommonModule, FormsModule]
 })
 export class AuthPage implements OnInit {
+  login() {
+    // Perform authentication here
 
-  constructor() { }
+    // If authentication is successful, navigate to the desired route
+    this.router.navigate(['/dashboard']);
+  }
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
