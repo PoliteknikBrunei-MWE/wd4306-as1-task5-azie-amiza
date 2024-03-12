@@ -35,10 +35,6 @@ export const routes: Routes = [
     loadComponent: () => import('./offers/new-offers/new-offers.page').then( m => m.NewOffersPage)
   },
   {
-    path: 'bookings',
-    loadComponent: () => import('./bookings/bookings.page').then( m => m.BookingsPage)
-  },
-  {
     path: 'tabs',
     loadComponent: () => import('./tabs/tabs.page').then( m => m.TabsPage)
   },
