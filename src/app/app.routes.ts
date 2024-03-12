@@ -23,18 +23,6 @@ export const routes: Routes = [
     loadComponent: () => import('./offers/offers.page').then( m => m.OffersPage)
   },
   {
-    path: 'offer-details',
-    loadComponent: () => import('./offers/offer-details/offer-details.page').then( m => m.OfferDetailsPage)
-  },
-  {
-    path: 'offer-bookings',
-    loadComponent: () => import('./offers/offer-bookings/offer-bookings.page').then( m => m.OfferBookingsPage)
-  },
-  {
-    path: 'new-offers',
-    loadComponent: () => import('./offers/new-offers/new-offers.page').then( m => m.NewOffersPage)
-  },
-  {
     path: 'tabs',
     loadComponent: () => import('./tabs/tabs.page').then( m => m.TabsPage)
   },
