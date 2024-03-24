@@ -26,4 +26,24 @@ export const routes: Routes = [
     path: 'tabs',
     loadComponent: () => import('./tabs/tabs.page').then( m => m.TabsPage)
   },
+
+  {
+    path: 'tabs',
+    component: TabsPage,
+    children: [
+      {
+        path: 'places',
+        loadComponent: () => import('./places/places.page').then((m) => m.PlacesPage)
+      },
+      {
+        path: 'offers',
+        loadComponent: () => import('./offers/offers.page').then((m) => m.OffersPage)
+      },
+    ],
+  },
+  {
+    path: 'places',
+    redirectTo: '/tabs/places',
+    pathMatch: 'full',
+  },
 ];
